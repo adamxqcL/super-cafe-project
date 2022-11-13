@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/menu-style.css">
+		<title>Food Menu - Assignment</title>
+	</head>
+
+	<body>
+		<div class="navbar">
+			<div class="title">
+				<a href="index.html"#home">HOME</a>				
+			</div>
+		</div>
+
+		<div class="tab">
+			<div class="tab-header">
+				<span class="header-dot"></span>
+				<span><b>MENU</b></span>
+			</div><br>
+			<button class="tablinks" onclick="menuList(event, 'Breakfast')">
+				<span><img src="images/main.jpg" width="64" height="64"></span><br>
+				Main
+			</button>
+			<button class="tablinks" onclick="menuList(event, 'Lunch')">
+				<span><img src="images/drink.jpg" width="64" height="64"></span><br>
+				Drink
+			</button>
+			<button class="tablinks" onclick="menuList(event, 'Dinner')">
+				<span><img src="images/dessert.jpg" width="64" height="64"></span><br>
+				Dessert
+			</button>
+		</div>
+
+		<div id="Breakfast" class="tabcontent" align="center">
+			<div class="tabcontent-inner">
+				<div class="row">
+					<div class="column col-left">
+						<span><img src="images/main-1.jpg" width="100" height="100"></span>
+					</div>
+					<div class="column col-mid">
+						<h2>Carbonara Spaggeti</h2>
+						<p class="text-muted">The best seller on the cafe.</p>
+						<p class="text-muted cook-time">
+							<span class="dot"></span>  15 mins &nbsp;
+							<span class="dot"></span>  2 serves
+						</p>
+					</div>
+					<div class="column col-right">
+						<h5 class="text-muted">Price</h5>
+						<h4>RM20.00</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column col-left">
+						<span><img src="images/main-2.jpg" width="100" height="100"></span>
+					</div>
+					<div class="column col-mid">
+						<h2>Meatball Spaggeti</h2>
+						<p class="text-muted">make with 100% real beef and best for meat lover.</p>
+						<p class="text-muted cook-time">
+							<span class="dot"></span>  20 mins &nbsp;
+							<span class="dot"></span>  2 serves
+						</p>
+					</div>
+					<div class="column col-right">
+						<h5 class="text-muted">Price</h5>
+						<h4>RM22.00</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="Lunch" class="tabcontent" align="center">
+			<div class="tabcontent-inner">
+				<div class="row">
+					<div class="column col-left">
+						<span><img src="images/drink-1.jpeg" width="100" height="100"></span>
+					</div>
+					<div class="column col-mid">
+						<h2>Latte</h2>
+						<p class="text-muted">smooth coffee</p>
+						<p class="text-muted cook-time">
+							<span class="dot"></span>  15 mins &nbsp;
+							<span class="dot"></span>  2 serves
+						</p>
+					</div>
+					<div class="column col-right">
+						<h5 class="text-muted">Price</h5>
+						<h4>RM13.00</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column col-left">
+						<span><img src="images/drink-2.jpg" width="100" height="100"></span>
+					</div>
+					<div class="column col-mid">
+						<h2>Espresso</h2>
+						<p class="text-muted">keep you continue the whole day without sleep.</p>
+						<p class="text-muted cook-time">
+							<span class="dot"></span>  15 mins &nbsp;
+							<span class="dot"></span>  2 serves
+						</p>
+					</div>
+					<div class="column col-right">
+						<h5 class="text-muted">Price</h5>
+						<h4>RM10.00</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="Dinner" class="tabcontent" align="center">
+			<div class="tabcontent-inner">
+				
+				<div class="row">
+					<div class="column col-left">
+						<span><img src="images/dessert-1.jpg" width="100" height="100"></span>
+					</div>
+					<div class="column col-mid">
+						<h2>Waffle</h2>
+						<p class="text-muted">Waffle and top on apple syrup</p>
+						<p class="text-muted cook-time">
+							<span class="dot"></span>  25 mins &nbsp;
+							<span class="dot"></span>  2 serves
+						</p>
+					</div>
+					<div class="column col-right">
+						<h5 class="text-muted">Price</h5>
+						<h4>RM15.00</h4>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column col-left">
+						<span><img src="images/dessert-2.jpg" width="100" height="100"></span>
+					</div>
+					<div class="column col-mid">
+						<h2>Cheese Cake</h2>
+						<p class="text-muted">Cheese cake that make from love.</p>
+						<p class="text-muted cook-time">
+							<span class="dot"></span>  25 mins &nbsp;
+							<span class="dot"></span>  2 serves
+						</p>
+					</div>
+					<div class="column col-right">
+						<h5 class="text-muted">Price</h5>
+						<h4>RM10.00</h4>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+		function menuList(event, foodTime) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+
+			document.getElementById(foodTime).style.display = "block";
+			event.currentTarget.className += " active";
+		}
+		</script>
+	</body>
+</html>

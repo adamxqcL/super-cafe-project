@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Account Page</title>
+  <link rel="stylesheet" href="css/login-admin.css">
+</head>
+<body>
+  <div class="wrapper">
+  <form action="admin-login.php" method="post">
+    <div class="form-container">
+      <!-- ------ radio inputs for clicking effect ------- -->
+      <!-- I have used 'name' attribute so that only one radio input can be checked at a time -->
+      <input type="radio" id="login-radio" name="radio-btn">
+      <input type="radio" id="reg-radio" name="radio-btn">
+      <div class="sliding-btn">
+      <label for="login-radio">Admin Login</label>
+              <hr>
+      </div>
+      <!-- ------- Login form --------- -->
+      <form id="login-form">
+        <input type="text" placeholder="email" name="email" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <input type="submit" placeholder="Login">
+      </form>
+</div>
+  </div>
+</body>
+</html>

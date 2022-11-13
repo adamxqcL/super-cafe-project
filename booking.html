@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reservation Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/booking-style.css">
+    </head>
+    <body>
+        
+        <section class = "banner">
+            <h2>BOOK YOUR TABLE NOW</h2>
+            <form action="booking.php" method="post">
+            <div class = "card-container">
+                <div class = "about-img">
+                    <!-- image here -->
+                </div>
+
+                <div class = "card-content">
+                    <h3>Reservation</h3>
+                    <form>
+                        <div class = "form-row">
+                            <select name = "days" name="days">
+                                <option value = "day-select">Select Day</option>
+                                <option value = "sunday">Sunday</option>
+                                <option value = "monday">Monday</option>
+                                <option value = "tuesday">Tuesday</option>
+                                <option value = "wednesday">Wednesday</option>
+                                <option value = "thursday">Thursday</option>
+                                <option value = "friday">Friday</option>
+                                <option value = "saturday">Saturday</option>
+                            </select>
+
+                            <select name = "hours" name="hours">
+                                <option value = "hour-select">Select Hour</option>
+                                <option value = "10">10: 00</option>
+                                <option value = "10">12: 00</option>
+                                <option value = "10">14: 00</option>
+                                <option value = "10">16: 00</option>
+                                <option value = "10">18: 00</option>
+                                <option value = "10">20: 00</option>
+                                <option value = "10">22: 00</option>
+                            </select>
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "text" placeholder="full name" name="full_name" >
+                            <input type = "text" placeholder="phone number" name="phone_number">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" placeholder="how many persons?" min = "1" name="how_many_person">
+                            <input type = "submit" value = "BOOK TABLE">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>
